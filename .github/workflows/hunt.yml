@@ -1,0 +1,39 @@
+name: hunt
+
+on:
+  schedule:
+    - cron: "*/20 * * * *"   # every ~20 min (GitHub may delay during busy periods)
+  workflow_dispatch: {}        # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write              # so it can save its "already seen" memory back to the repo
+
+jobs:
+  hunt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Write Telegram config from secrets
+        run: |
+          printf '{"telegram_bot_token":"%s","telegram_chat_id":"%s","heartbeat":true}' \
+            "${{ secrets.TELEGRAM_BOT_TOKEN }}" "${{ secrets.TELEGRAM_CHAT_ID }}" > watch_config.json
+
+      - name: Run the hunters
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python bounty_watch.py || true
+          python reddit_watch.py || true
+
+      - name: Save state (so it remembers what it already saw)
+        run: |
+          rm -f watch_config.json
+          git config user.name "hunter-bot"
+          git config user.email "hunter-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "state $(date -u +%FT%TZ)" || echo "no changes"
+          git push || echo "nothing to push"
