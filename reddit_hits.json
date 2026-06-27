@@ -1,6 +1,15 @@
 [
   {
     "sub": "forhire",
+    "title": "​[Hiring] Fix Stripe Webhook & Supabase DB Sync for SaaS MVP ($120)",
+    "url": "https://www.reddit.com/r/forhire/comments/1uh4t6b/hiring_fix_stripe_webhook_supabase_db_sync_for/",
+    "author": "/u/Extra-Management-931",
+    "created": "2026-06-27T14:55",
+    "snippet": "​ ​Budget: $120 Fixed Timeline: Needs to be done today/tonight ​Hey everyone, I’m building a micro-SaaS and I’m completely stuck on getting my checkout flow to sync with my database. I don't have time for a week-long interview process; I just need someone who knows what they are doing to hop in and fix this. ​The Work: ​Connect a Stripe webhook endpoint to a Supabase backend (Next.js environment).",
+    "found_at": "2026-06-27T16:20:02+00:00"
+  },
+  {
+    "sub": "forhire",
     "title": "[Hiring] Implementor who has experience Integrating Pandadoc with Salesforce",
     "url": "https://www.reddit.com/r/forhire/comments/1ugy57c/hiring_implementor_who_has_experience_integrating/",
     "author": "/u/KoreanJesus_193",
