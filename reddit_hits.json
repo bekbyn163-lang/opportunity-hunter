@@ -1,6 +1,15 @@
 [
   {
     "sub": "forhire",
+    "title": "[Hiring] - GoLogin, proxies, Python automation, and Selenium.",
+    "url": "https://www.reddit.com/r/forhire/comments/1ula3ko/hiring_gologin_proxies_python_automation_and/",
+    "author": "/u/Naive_Area6965",
+    "created": "2026-07-02T06:15",
+    "snippet": "I'm looking for a developer with strong experience in GoLogin, proxies, Python automation, and Selenium who can diagnose and fix an issue with my automation setup. My Python automation is already built. It successfully connects to my GoLogin profile, launches the browser, and navigates to the target website. However, when the browser is launched through the GoLogin Python SDK, every website behave",
+    "found_at": "2026-07-02T10:16:19+00:00"
+  },
+  {
+    "sub": "forhire",
     "title": "[Hiring] Remote Video Recording Task Participants - US & Canada ONLY",
     "url": "https://www.reddit.com/r/forhire/comments/1ukvg16/hiring_remote_video_recording_task_participants/",
     "author": "/u/Otherwise-Block-8575",
